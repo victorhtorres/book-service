@@ -19,8 +19,8 @@ jobs:
           distribution: 'corretto'
           java-version: 21
       - name: Build app
-        run: |
-          mvn clean install
-          ls -l target/
+        run: mvn clean install
+      - name: Validate compile object    
+        run: ls -l target/
 
         

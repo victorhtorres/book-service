@@ -17,19 +17,15 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'corretto'
-          java-version: 21
-      - name: Validate commands
-        run: |
-          mvn --version
-          java --version
-          ls -l
+          java-version: 17
   
   build:
     runs-on: ubuntu-20.04
     needs: prepare
     steps:
       - name: Build app
-        run: | 
+        run: |
+          ls -l
           mvn clean install
           ls -l target/
 

@@ -8,7 +8,7 @@ on:
     - main
 
 jobs:
-  prepare:
+  build:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout repository
@@ -18,14 +18,8 @@ jobs:
         with:
           distribution: 'corretto'
           java-version: 17
-  
-  build:
-    runs-on: ubuntu-20.04
-    needs: prepare
-    steps:
       - name: Build app
         run: |
-          ls -l
           mvn clean install
           ls -l target/
 

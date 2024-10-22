@@ -15,8 +15,8 @@ This is a Spring Boot microservice for managing book-related operations. It incl
 
 ## Prerequisites
 
-- **Java 17** or higher
-- **Maven 3.6+**
+- **Java 21** or higher
+- **Maven 3.8.8+**
 - **Docker** (optional, for containerization)
 
 ## Setup

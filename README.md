@@ -74,13 +74,13 @@ To build and run the application as a JAR file:
 
 ## API Endpoints
 
-| Method | Endpoint          | Description                   |
-|--------|-------------------|-------------------------------|
-| GET    | `/books`           | Retrieve all books            |
-| GET    | `/books/{id}`      | Retrieve a specific book      |
-| POST   | `/books`           | Create a new book             |
-| PUT    | `/books/{id}`      | Update an existing book       |
-| DELETE | `/books/{id}`      | Delete a book                 |
+| Method | Endpoint             | Description                   |
+|--------|----------------------|-------------------------------|
+| GET    | `/api/v1/books`      | Retrieve all books            |
+| GET    | `/api/v1/books/{id}` | Retrieve a specific book      |
+| POST   | `/api/v1/books`      | Create a new book             |
+| PUT    | `/api/v1/books/{id}` | Update an existing book       |
+| DELETE | `/api/v1/books/{id}` | Delete a book                 |
 
 ## Database
 

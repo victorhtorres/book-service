@@ -1,5 +1,7 @@
 # Book Service
 
+[![codecov](https://codecov.io/github/jacs4210/book-service/graph/badge.svg?token=FBHYV6VVZM)](https://codecov.io/github/jacs4210/book-service)
+
 ## Overview
 
 This is a Spring Boot microservice for managing book-related operations. It includes RESTful API endpoints for CRUD operations on book data, such as creating, updating, retrieving, and deleting book records.

@@ -1,6 +1,6 @@
 # Book Service
 
-![Estado de las pruebas](https://github.com/victorhtorres/book-service/actions/workflows/ci.yml/badge.svg?branch=unit-test-ci)
+![Estado de las pruebas](https://github.com/victorhtorres/book-service/actions/workflows/ci.yml/badge.svg?branch=main)
 
 ## Overview
 

@@ -1,6 +1,6 @@
 # Book Service
 
-[![codecov](https://codecov.io/github/jacs4210/book-service/graph/badge.svg?token=FBHYV6VVZM)](https://codecov.io/github/jacs4210/book-service)
+![Estado de las pruebas](https://github.com/jacs4210/book-service/actions/workflows/ci.yml/badge.svg?branch=unit-test-ci)
 
 ## Overview
 

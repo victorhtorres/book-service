@@ -25,6 +25,7 @@ jobs:
 
   test:
     runs-on: ubuntu-20.04
+    needs: build
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4.2.1
@@ -38,20 +39,6 @@ jobs:
       - name: Run test
         run: mvn clean test jacoco:report
 
-      - name: Upload Surfire report
-        uses: actions/upload-artifact@v4.4.3
-        with:
-          name: Surefire reports
-          path: target/surefire-reports/
-      
-      - name: Upload Jacoco report
-        uses: actions/upload-artifact@v4.4.3
-        with:
-          name: Jacoco reports
-          path: target/site/jacoco
-
       - name: Publish Test Report
-        uses: mikepenz/action-junit-report@v4
         if: success() || failure()
-        with:
-          report_paths: target/surefire-reports/TEST-*.xml
+        uses: ScaCap/action-surefire-report@v1.8.0

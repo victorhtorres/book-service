@@ -37,8 +37,10 @@ jobs:
           java-version: 21
 
       - name: Run test
-        run: mvn clean test jacoco:report
+        run: mvn clean test
 
       - name: Publish Test Report
         if: success() || failure()
-        uses: ScaCap/action-surefire-report@v1.8.0
+        uses: mikepenz/action-junit-report@v4
+        with:
+          report_paths: target/surefire-reports/TEST-*.xml

@@ -1,5 +1,7 @@
 # Book Service
 
+![Estado de las pruebas](https://github.com/victorhtorres/book-service/actions/workflows/ci.yml/badge.svg?branch=main)
+
 ## Overview
 
 This is a Spring Boot microservice for managing book-related operations. It includes RESTful API endpoints for CRUD operations on book data, such as creating, updating, retrieving, and deleting book records.

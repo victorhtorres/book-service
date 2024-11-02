@@ -13,14 +13,40 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4.2.1
+      
       - name: Install maven and jdk
         uses: actions/setup-java@v4
         with:
           distribution: 'corretto'
           java-version: 21
+      
       - name: Build app
-        run: mvn clean install
-      - name: Validate compile object    
-        run: ls -l target/
+        run: mvn clean install -Dmaven.test.skip=true
 
-        
+  test:
+    runs-on: ubuntu-20.04
+    needs: build
+    permissions: 
+      checks: write
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.1
+      
+      - name: Install maven and jdk
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'corretto'
+          java-version: 21
+
+      - name: Run test
+        run: mvn clean test
+
+      - name: Publish Test Report
+        if: success() || failure()
+        uses: scacap/action-surefire-report@v1
+        with:
+          check_name: Unit test report
+          fail_on_test_failures: true
+          file_name_in_stack_trace: true
+          

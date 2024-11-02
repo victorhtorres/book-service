@@ -41,6 +41,9 @@ jobs:
 
       - name: Publish Test Report
         if: success() || failure()
-        uses: mikepenz/action-junit-report@v4
+        uses: scacap/action-surefire-report@v1
         with:
-          report_paths: target/surefire-reports/TEST-*.xml
+          check_name: Unit test report
+          fail_on_test_failures: true
+          file_name_in_stack_trace: true
+          

@@ -26,6 +26,9 @@ jobs:
   test:
     runs-on: ubuntu-20.04
     needs: build
+    permissions: 
+      checks: write
+      contents: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4.2.1

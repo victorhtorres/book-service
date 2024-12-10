@@ -40,7 +40,7 @@ jobs:
           java-version: 21
 
       - name: Run test
-        run: mvn clean test
+        run: mvn verify -Pcoverage-check
 
       - name: Publish Test Report
         if: success() || failure()

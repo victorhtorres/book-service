@@ -27,6 +27,7 @@
 		<url/>
 	</scm>
 	<properties>
+		<filename.app>book-service-api</filename.app>
 		<java.version>21</java.version>
 	</properties>
 	<dependencies>
@@ -80,6 +81,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>${filename.app}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
